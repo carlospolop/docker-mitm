@@ -5,9 +5,9 @@ This is a container prepared with env variables to **proxy HTTP traffic from the
 This is useful in environments where:
 
 1. You can configure the Docker image to use
-2. Some interesting connections are created from the contair and you want to check what
+2. Some interesting connections are created from the container and you want to check them
 
-This Docker image is public in **docker.io/carlospolop/docker-mitm:v4**
+This Docker image is public in **docker.io/carlospolop/docker-mitm:v6** (This would be useless for you as your proxy ad cert will be different).
 
 ### Start MitM proxy
 
@@ -33,8 +33,13 @@ mitmproxy --listen-port 8000 --set block_global=false [--allow-hosts "github.com
 
 
 ```bash
-# Build
-docker build -t docker-mitm . 
+# Get ngrok address
+ngrok tcp 4444 #You could use this adderss as proxy in the env variables
+
+# Build (for change your dockerhub username)
+docker build -t docker-mitm .
+docker tag docker-mitm carlospolop/docker-mitm:v5
+docker push carlospolop/docker-mitm:v5
 
 # Just running apt-get update you should start capturing traffic
 docker run -it docker-mitm apt-get update

