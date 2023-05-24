@@ -24,7 +24,7 @@ mitmproxy --listen-port 8000 --set block_global=false [--allow-hosts "github.com
 
 ### Create Docker image
 
-**REMEMBER TO SET THE MITMPROXY CERTIFICATE CHANGE THE VALUES OF `https_proxy` and `http_proxy` in the `Dockerfile` with the hostname and port where the proxy will be listening**
+**REMEMBER TO SET THE MITMPROXY CERTIFICATE & CHANGE THE VALUES OF `https_proxy` and `http_proxy` in the `Dockerfile` with the hostname and port where the proxy will be listening**
 
 **Important**: It's possible that the binary you are doing a MitM has certificate pinning. This will probably break the binary and won't allow you to continue capturing other requests. In that case use the params `--allow-hosts` (if you know which host you want to attack) or `--ignore-hosts` to ignore the one giving problems.
 
