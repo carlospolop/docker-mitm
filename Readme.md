@@ -34,7 +34,7 @@ mitmproxy --listen-port 8000 --set block_global=false [--allow-hosts "github.com
 
 ```bash
 # Get ngrok address
-ngrok tcp 4444 #You could use this adderss as proxy in the env variables
+ngrok tcp 8000 #You could use this adderss as proxy in the env variables
 
 # Build (for change your dockerhub username)
 docker build -t docker-mitm .
