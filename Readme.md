@@ -19,7 +19,7 @@ pip3 install mitmproxy
 cat ~/.mitmproxy/mitmproxy-ca-cert.pem
 
 # Start listening
-mitmproxy --listen-port 8000 --set block_global=false [--allow-hosts "github.com"] [--ignore-hosts "169.254.169.254|169.254.170.2|amazonaws.com"]
+mitmproxy --listen-port 8000 [--set block_global=false] [--allow-hosts "github.com"] [--ignore-hosts "169.254.169.254|169.254.170.2|amazonaws.com"]
 ```
 
 ### Create Docker image
