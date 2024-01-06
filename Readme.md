@@ -34,12 +34,12 @@ mitmproxy --listen-port 8000 [--set block_global=false] [--allow-hosts "github.c
 
 ```bash
 # Get ngrok address
-ngrok tcp 8000 #You could use this adderss as proxy in the env variables
+ngrok tcp 8000 #You could use this address as proxy in the env variables
 
 # Build (for change your dockerhub username)
 docker build -t docker-mitm .
-docker tag docker-mitm carlospolop/docker-mitm:v5
-docker push carlospolop/docker-mitm:v5
+docker tag docker-mitm carlospolop/docker-mitm:v06-01-2023
+docker push carlospolop/docker-mitm:v06-01-2023
 
 # Just running apt-get update you should start capturing traffic
 docker run -it docker-mitm apt-get update
@@ -48,6 +48,6 @@ docker run -it docker-mitm curl https://github.com
 
 # Upload to docker hub 
 docker login
-docker tag docker-mitm carlospolop/docker-mitm:vX # Change X
-docker push carlospolop/docker-mitm:vX # Change X
+docker tag docker-mitm carlospolop/docker-mitm:v06-01-2023
+docker push carlospolop/docker-mitm:v06-01-2023
 ```

