@@ -9,6 +9,10 @@ This is useful in environments where:
 
 This Docker image is public in **docker.io/carlospolop/docker-mitm:v6** (This would be useless for you as your proxy ad cert will be different).
 
+```
+Note: according to cloud.hacktricks.xyz the version of mitmproxy 9.0.1 has to be used, can be downloaded here: https://mitmproxy.org/downloads/#9.0.1/
+```
+
 ### Start MitM proxy
 
 ```bash
